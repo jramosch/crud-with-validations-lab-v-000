@@ -21,6 +21,26 @@
         <%= label_tag "title", "Title" %>
         <%= text_field_tag "title", @song.title %>
       </div>
+      <div class="field<%= ' field_with_errors' if @song.errors[:release_year].any?%>">
+        <%= label_tag "release_year", "Release Year" %>
+        <%= text_field_tag "release_year", @song.release_year %>
+      </div>
+      <div class="field<%= ' field_with_errors' if @song.errors[:released].any?%>">
+        <%= label_tag "released", "Released"%>
+        <%= text_field_tag "released", @song.released%>
+      </div>
+      <div class="field<%= ' field_with_errors' if @song.errors[].any?%>">
+        <%= label_tag %>
+        <%= text_field_tag %>
+      </div>
+      <div class="field<%= ' field_with_errors' if @song.errors[].any?%>">
+        <%= label_tag %>
+        <%= text_field_tag %>
+      </div>
+      <div class="field<%= ' field_with_errors' if @song.errors[].any?%>">
+        <%= label_tag %>
+        <%= text_field_tag %>
+      </div>
     <% end %>
   </body>
 </html>
