@@ -31,7 +31,7 @@ class SongsController < ApplicationController
     @song.attributes=(song_params)
     
     if @song.valid?
-      @song.update(song_params)
+      @song.save
       redirect_to song_path(@song)
     else
       render :edit
