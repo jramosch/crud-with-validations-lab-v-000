@@ -27,7 +27,7 @@ class SongsController < ApplicationController
 
   def update
     @song.attributes=(song_params)
-    
+    binding.pry
     if @song.valid?
       @song.save
       redirect_to song_path(@song)
