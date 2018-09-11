@@ -27,9 +27,9 @@
       </div>
       <div class="field<%= ' field_with_errors' if @song.errors[:released].any?%>">
         <%= label_tag "released", "Released"%>
-        <%= text_field_tag "released", @song.released%>
+        <%= check_box_tag "released", @song.released%>
       </div>
-      <div class="field<%= ' field_with_errors' if @song.errors[].any?%>">
+      <div class="field<%= ' field_with_errors' if @song.errors[:genre].any?%>">
         <%= label_tag %>
         <%= text_field_tag %>
       </div>
