@@ -1,4 +1,5 @@
 class SongsController < ApplicationController
+  before_action 
 
   def index
     @songs = Song.all
@@ -42,5 +43,9 @@ class SongsController < ApplicationController
 
   def song_params
     params.permit(:title, :released, :release_year, :artist_name, :genre)
+  end
+
+  def set_post!
+    @song = Song.find(params[:id])
   end
 end
