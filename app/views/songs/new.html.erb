@@ -6,7 +6,7 @@
   </head>
   <h2>Create a new song!</h2>
   <body>
-    <%= form_tag("/songs") do %>
+    <%= form_tag songs_path do %>
       <% if @song.errors.any? %>
         <div id="error_explanation">
           <h2>There were some errors:</h2>
