@@ -4,9 +4,25 @@
     <meta charset="utf-8">
     <title>Song Index</title>
   </head>
-  <body>
-    <% @songs.each do |song| %>
-      <div><%= link_to song.title, song_path(song) %></div>
-    <% end %>
-  </body>
+  <table>
+    <thead>
+      <th>Title</th>
+      <th>Genre</th>
+      <th>Artist</th>
+      <th>Released</th>
+      <th>Release Year</th>
+    </thead>
+    <tbody>
+      <% @songs.each do |song| %>
+      <td>song.title</td>
+      <td>song.genre</td>
+      <td>song.artist_name</td>
+      <% if @song.released %>
+        <td>"Yes"</td>
+      <% else %>
+        <td>"No"</td>
+      <% end %>
+      <td>song.release_year</td>
+    </tbody>
+  </table>
 </html>
