@@ -15,6 +15,7 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
       <% @songs.each do |song| %>
         <td>song.title</td>
         <td>song.genre</td>
@@ -26,6 +27,7 @@
         <% end %>
         <td>song.release_year</td>
       <% end %>
+      </tr>
     </tbody>
   </table>
 </html>
