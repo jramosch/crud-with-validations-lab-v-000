@@ -7,12 +7,12 @@
   <h2>Create a new song!</h2>
   <body>
     <%= form_tag("/songs") do %>
-      <%= if @song.errors.any? %>
+      <% if @song.errors.any? %>
         <div id="error_explanation">
           <h2>There were some errors:</h2>
           <ul>
             <% @song.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
+              <li><%= message %></li>
             <% end %>
           </ul>
         </div>
